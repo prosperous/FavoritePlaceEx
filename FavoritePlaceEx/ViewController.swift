@@ -20,6 +20,12 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func onAboutPressed(sender: AnyObject) {
+        performSegueWithIdentifier("About", sender: nil)
+    }
 
+    @IBAction func onPhotosPressed(sender: AnyObject) {
+        performSegueWithIdentifier("Photos", sender: nil)
+    }
 }
 

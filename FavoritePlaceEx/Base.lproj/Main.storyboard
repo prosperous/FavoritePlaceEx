@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FavoritePlaceEx" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +17,356 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="visite-nocturne-chamonix" translatesAutoresizingMaskIntoConstraints="NO" id="F0t-1F-phz">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="qIY-ud-i6U">
+                                <rect key="frame" x="127" y="530" width="290" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Dd-rn-IvT" customClass="BlueButton" customModule="FavoritePlaceEx" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="130" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="130" id="3I2-po-meb"/>
+                                            <constraint firstAttribute="height" constant="30" id="3U7-dn-PBx"/>
+                                        </constraints>
+                                        <state key="normal" title="About"/>
+                                        <connections>
+                                            <action selector="onAboutPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jfy-PA-Bni"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jor-ZR-rnU" customClass="BlueButton" customModule="FavoritePlaceEx" customModuleProvider="target">
+                                        <rect key="frame" x="160" y="0.0" width="130" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="130" id="5I4-Ed-j4K"/>
+                                            <constraint firstAttribute="height" constant="30" id="6Ss-Rd-7Lh"/>
+                                        </constraints>
+                                        <state key="normal" title="Photos"/>
+                                        <connections>
+                                            <action selector="onPhotosPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kut-zD-HuJ"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="SHAMONIX" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CU1-Dn-YzJ">
+                                <rect key="frame" x="136" y="20" width="328" height="72"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="50"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="F0t-1F-phz" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="0me-Qf-tB0"/>
+                            <constraint firstItem="CU1-Dn-YzJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8zc-Sq-s1Q"/>
+                            <constraint firstItem="F0t-1F-phz" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="DPe-b3-Z2c"/>
+                            <constraint firstItem="qIY-ud-i6U" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ukq-ho-ja6"/>
+                            <constraint firstItem="CU1-Dn-YzJ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="WYc-b6-w0G"/>
+                            <constraint firstAttribute="trailing" secondItem="F0t-1F-phz" secondAttribute="trailing" id="obt-y4-GBK"/>
+                            <constraint firstItem="F0t-1F-phz" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="tWZ-Pz-LcK"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="qIY-ud-i6U" secondAttribute="bottom" constant="40" id="vgb-Fm-4Xv"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="F0t-1F-phz" secondAttribute="bottom" id="wZY-xW-12u"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="0me-Qf-tB0"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <connections>
+                        <segue destination="kbq-Eb-FKF" kind="show" identifier="About" id="Vt0-nM-5j2"/>
+                        <segue destination="2fC-dy-w4b" kind="show" identifier="Photos" id="xVq-TB-98Q"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="305" y="418"/>
+        </scene>
+        <!--About View Controller-->
+        <scene sceneID="lKR-dY-X9n">
+            <objects>
+                <viewController id="kbq-Eb-FKF" customClass="AboutViewController" customModule="FavoritePlaceEx" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="17n-Ns-gNa"/>
+                        <viewControllerLayoutGuide type="bottom" id="TD2-VW-qTk"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="X69-D9-sIz">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ezb-pp-GYH">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mountain" translatesAutoresizingMaskIntoConstraints="NO" id="t3T-3j-a00">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="460"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="140" id="Jry-xk-tL0"/>
+                                            <constraint firstAttribute="height" constant="100" id="WET-60-gRX">
+                                                <variation key="heightClass=compact" constant="130"/>
+                                            </constraint>
+                                            <constraint firstAttribute="height" constant="380" id="bwI-3M-90p"/>
+                                            <constraint firstAttribute="height" constant="141" id="ler-lG-uJ2"/>
+                                        </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="Jry-xk-tL0"/>
+                                                <exclude reference="WET-60-gRX"/>
+                                                <exclude reference="bwI-3M-90p"/>
+                                                <exclude reference="ler-lG-uJ2"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=compact">
+                                            <mask key="constraints">
+                                                <include reference="WET-60-gRX"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="widthClass=regular" misplaced="YES">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="380"/>
+                                            <mask key="constraints">
+                                                <include reference="bwI-3M-90p"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=compact">
+                                            <mask key="constraints">
+                                                <include reference="Jry-xk-tL0"/>
+                                                <exclude reference="ler-lG-uJ2"/>
+                                            </mask>
+                                        </variation>
+                                    </imageView>
+                                    <stackView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="iw4-74-Dde">
+                                        <rect key="frame" x="0.0" y="460" width="320" height="20"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="c9P-Z1-Ne0">
+                                                <rect key="frame" x="0.0" y="0.0" width="320" height="0.0"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Population" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p1E-Pm-bJ1">
+                                                        <rect key="frame" x="0.0" y="0.0" width="106" height="0.0"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="22"/>
+                                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <nil key="highlightedColor"/>
+                                                        <variation key="widthClass=regular" ambiguous="YES" misplaced="YES">
+                                                            <rect key="frame" x="0.0" y="0.0" width="106" height="26"/>
+                                                        </variation>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="9800" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Tg-aK-Hcq">
+                                                        <rect key="frame" x="0.0" y="0.0" width="44.5" height="0.0"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <nil key="highlightedColor"/>
+                                                        <variation key="widthClass=regular" ambiguous="YES" misplaced="YES">
+                                                            <rect key="frame" x="0.0" y="26" width="45" height="24"/>
+                                                        </variation>
+                                                        <variation key="heightClass=regular-widthClass=regular" ambiguous="YES">
+                                                            <rect key="frame" x="0.0" y="0.0" width="45" height="0.0"/>
+                                                        </variation>
+                                                    </label>
+                                                </subviews>
+                                                <variation key="heightClass=compact" axis="horizontal" spacing="40"/>
+                                                <variation key="widthClass=regular" ambiguous="YES" misplaced="YES">
+                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+                                                </variation>
+                                                <variation key="heightClass=regular-widthClass=regular" ambiguous="YES">
+                                                    <rect key="frame" x="0.0" y="0.0" width="760" height="0.0"/>
+                                                </variation>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="9PG-PW-ZzF">
+                                                <rect key="frame" x="0.0" y="10" width="320" height="0.0"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="30" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hMM-vw-BvD">
+                                                        <rect key="frame" x="0.0" y="0.0" width="112.5" height="0.0"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="22"/>
+                                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <nil key="highlightedColor"/>
+                                                        <variation key="widthClass=regular" ambiguous="YES" misplaced="YES">
+                                                            <rect key="frame" x="0.0" y="0.0" width="113" height="26"/>
+                                                        </variation>
+                                                        <variation key="heightClass=regular-widthClass=regular" ambiguous="YES">
+                                                            <rect key="frame" x="0.0" y="0.0" width="113" height="15"/>
+                                                        </variation>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chamonix is a commune in the Haute-Savoie département in the Rhône-Alpes region in south-eastern France. " textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="30" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3P6-I1-uQG">
+                                                        <rect key="frame" x="0.0" y="0.0" width="308" height="0.0"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <nil key="highlightedColor"/>
+                                                        <variation key="heightClass=compact" misplaced="YES">
+                                                            <rect key="frame" x="0.0" y="26" width="308" height="60"/>
+                                                        </variation>
+                                                        <variation key="widthClass=regular" ambiguous="YES" misplaced="YES">
+                                                            <rect key="frame" x="0.0" y="26" width="308" height="0.0"/>
+                                                        </variation>
+                                                        <variation key="heightClass=regular-widthClass=regular" ambiguous="YES">
+                                                            <rect key="frame" x="0.0" y="15" width="719" height="40"/>
+                                                        </variation>
+                                                    </label>
+                                                </subviews>
+                                                <variation key="heightClass=compact" misplaced="YES">
+                                                    <rect key="frame" x="0.0" y="101" width="320" height="86"/>
+                                                </variation>
+                                                <variation key="widthClass=regular" ambiguous="YES" misplaced="YES">
+                                                    <rect key="frame" x="0.0" y="60" width="320" height="26"/>
+                                                </variation>
+                                                <variation key="heightClass=regular-widthClass=regular" ambiguous="YES">
+                                                    <rect key="frame" x="0.0" y="10" width="760" height="55"/>
+                                                </variation>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="z0N-3Z-Hm4">
+                                                <rect key="frame" x="0.0" y="20" width="320" height="0.0"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="woD-5t-3ew">
+                                                        <rect key="frame" x="0.0" y="0.0" width="320" height="0.0"/>
+                                                        <string key="text">Brief history
+</string>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="22"/>
+                                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <nil key="highlightedColor"/>
+                                                        <variation key="heightClass=regular-widthClass=regular" ambiguous="YES">
+                                                            <rect key="frame" x="0.0" y="0.0" width="760" height="26"/>
+                                                        </variation>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="30" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gyz-VG-f06">
+                                                        <rect key="frame" x="0.0" y="0.0" width="320" height="0.0"/>
+                                                        <string key="text">Situated near the massive peaks of the Aiguilles Rouges and most notably the Aiguille du Midi, Chamonix is one of the oldest ski resorts in France and is known as the "gateway to the European Cascades." The north side of the summit of Mont Blanc, and therefore the summit itself are part of the village of Chamonix.</string>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <nil key="highlightedColor"/>
+                                                        <variation key="heightClass=compact" misplaced="YES">
+                                                            <rect key="frame" x="0.0" y="0.0" width="320" height="159"/>
+                                                        </variation>
+                                                        <variation key="widthClass=regular" ambiguous="YES" misplaced="YES">
+                                                            <rect key="frame" x="0.0" y="0.0" width="320" height="5"/>
+                                                        </variation>
+                                                        <variation key="heightClass=regular-widthClass=regular" ambiguous="YES">
+                                                            <rect key="frame" x="0.0" y="26" width="760" height="80"/>
+                                                        </variation>
+                                                    </label>
+                                                </subviews>
+                                                <variation key="heightClass=compact" misplaced="YES">
+                                                    <rect key="frame" x="0.0" y="192" width="320" height="159"/>
+                                                    <mask key="subviews">
+                                                        <exclude reference="woD-5t-3ew"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="widthClass=regular" ambiguous="YES" misplaced="YES">
+                                                    <rect key="frame" x="0.0" y="96" width="320" height="5"/>
+                                                </variation>
+                                                <variation key="heightClass=regular-widthClass=regular" ambiguous="YES">
+                                                    <rect key="frame" x="0.0" y="75" width="760" height="106"/>
+                                                </variation>
+                                            </stackView>
+                                        </subviews>
+                                        <variation key="heightClass=compact" spacing="5"/>
+                                        <variation key="widthClass=regular" misplaced="YES">
+                                            <rect key="frame" x="0.0" y="380" width="320" height="100"/>
+                                        </variation>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Fa-ND-Fnr" customClass="BlueButton" customModule="FavoritePlaceEx" customModuleProvider="target">
+                                <rect key="frame" x="20" y="10" width="60" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="cy8-Dg-Ti1"/>
+                                </constraints>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <action selector="backAction:" destination="kbq-Eb-FKF" eventType="touchUpInside" id="hH6-Sn-lz5"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="3Fa-ND-Fnr" firstAttribute="leading" secondItem="X69-D9-sIz" secondAttribute="leading" constant="20" id="RYC-ch-C8P"/>
+                            <constraint firstAttribute="bottom" secondItem="ezb-pp-GYH" secondAttribute="bottom" id="YDB-jn-Lh0"/>
+                            <constraint firstItem="ezb-pp-GYH" firstAttribute="leading" secondItem="X69-D9-sIz" secondAttribute="leading" id="eme-i9-TFQ"/>
+                            <constraint firstItem="ezb-pp-GYH" firstAttribute="top" secondItem="17n-Ns-gNa" secondAttribute="bottom" id="h6T-zv-ynf"/>
+                            <constraint firstItem="3Fa-ND-Fnr" firstAttribute="top" secondItem="17n-Ns-gNa" secondAttribute="bottom" constant="10" id="p5V-p7-IT2"/>
+                            <constraint firstAttribute="trailing" secondItem="ezb-pp-GYH" secondAttribute="trailing" id="pMZ-0H-x5j"/>
+                        </constraints>
+                    </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YDi-oc-fxQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-328" y="1249"/>
+        </scene>
+        <!--Photos View Controller-->
+        <scene sceneID="wKu-VV-rQx">
+            <objects>
+                <viewController id="2fC-dy-w4b" customClass="PhotosViewController" customModule="FavoritePlaceEx" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="VHH-0i-Quh"/>
+                        <viewControllerLayoutGuide type="bottom" id="EDX-z6-wYI"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Yqg-gu-xfI">
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Ts3-te-RCS">
+                                <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Panorama" translatesAutoresizingMaskIntoConstraints="NO" id="SL7-4L-ETx">
+                                        <rect key="frame" x="0.0" y="0.0" width="667" height="121.5"/>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="aFa-dq-Znf">
+                                        <rect key="frame" x="0.0" y="126.5" width="667" height="122"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AiguilleduMidi" translatesAutoresizingMaskIntoConstraints="NO" id="9ZR-AY-FVG">
+                                                <rect key="frame" x="0.0" y="0.0" width="331" height="122"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mountain" translatesAutoresizingMaskIntoConstraints="NO" id="Vki-Oq-vGZ">
+                                                <rect key="frame" x="336" y="0.0" width="331" height="122"/>
+                                            </imageView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Cwy-1v-QOZ">
+                                        <rect key="frame" x="0.0" y="253.5" width="667" height="121.5"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="visite-nocturne-chamonix" translatesAutoresizingMaskIntoConstraints="NO" id="Cav-F8-1p7">
+                                                <rect key="frame" x="0.0" y="0.0" width="331" height="121.5"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Les drus chamonix" translatesAutoresizingMaskIntoConstraints="NO" id="7bq-Sl-gTc">
+                                                <rect key="frame" x="336" y="0.0" width="331" height="121.5"/>
+                                            </imageView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TUo-Ze-hXX" customClass="BlueButton" customModule="FavoritePlaceEx" customModuleProvider="target">
+                                <rect key="frame" x="20" y="10" width="60" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="cyS-is-eb5"/>
+                                </constraints>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <action selector="backAction:" destination="2fC-dy-w4b" eventType="touchUpInside" id="2i6-t7-Wwh"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="TUo-Ze-hXX" firstAttribute="leading" secondItem="Yqg-gu-xfI" secondAttribute="leadingMargin" id="27n-f0-jQ0"/>
+                            <constraint firstItem="Ts3-te-RCS" firstAttribute="leading" secondItem="Yqg-gu-xfI" secondAttribute="leading" id="4lz-jM-tH0"/>
+                            <constraint firstItem="Ts3-te-RCS" firstAttribute="top" secondItem="Yqg-gu-xfI" secondAttribute="top" id="FqS-0n-ge3"/>
+                            <constraint firstItem="TUo-Ze-hXX" firstAttribute="top" secondItem="VHH-0i-Quh" secondAttribute="bottom" constant="10" id="QLT-eF-tgV"/>
+                            <constraint firstItem="EDX-z6-wYI" firstAttribute="top" secondItem="Ts3-te-RCS" secondAttribute="bottom" id="eUQ-8l-Kyf"/>
+                            <constraint firstAttribute="trailing" secondItem="Ts3-te-RCS" secondAttribute="trailing" id="klM-6c-sOv"/>
+                        </constraints>
+                    </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UAy-mx-JGg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="884" y="1249"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="AiguilleduMidi" width="600" height="400"/>
+        <image name="Les drus chamonix" width="800" height="600"/>
+        <image name="Panorama" width="1933" height="970"/>
+        <image name="mountain" width="800" height="600"/>
+        <image name="visite-nocturne-chamonix" width="480" height="356"/>
+    </resources>
 </document>

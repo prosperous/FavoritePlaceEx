@@ -12,6 +12,9 @@
 		B015C5561C4F89B60001EDD6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B015C5541C4F89B60001EDD6 /* Main.storyboard */; };
 		B015C5581C4F89B60001EDD6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B015C5571C4F89B60001EDD6 /* Assets.xcassets */; };
 		B015C55B1C4F89B60001EDD6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B015C5591C4F89B60001EDD6 /* LaunchScreen.storyboard */; };
+		B015C5641C4FAAE60001EDD6 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B015C5631C4FAAE60001EDD6 /* AboutViewController.swift */; };
+		B015C5661C4FAAF50001EDD6 /* PhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B015C5651C4FAAF50001EDD6 /* PhotosViewController.swift */; };
+		B015C5681C4FAB2C0001EDD6 /* BlueButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B015C5671C4FAB2C0001EDD6 /* BlueButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +25,9 @@
 		B015C5571C4F89B60001EDD6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B015C55A1C4F89B60001EDD6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B015C55C1C4F89B60001EDD6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B015C5631C4FAAE60001EDD6 /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		B015C5651C4FAAF50001EDD6 /* PhotosViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotosViewController.swift; sourceTree = "<group>"; };
+		B015C5671C4FAB2C0001EDD6 /* BlueButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlueButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +60,25 @@
 		B015C54F1C4F89B60001EDD6 /* FavoritePlaceEx */ = {
 			isa = PBXGroup;
 			children = (
+				B015C5621C4FAABC0001EDD6 /* Controllers */,
 				B015C5501C4F89B60001EDD6 /* AppDelegate.swift */,
-				B015C5521C4F89B60001EDD6 /* ViewController.swift */,
 				B015C5541C4F89B60001EDD6 /* Main.storyboard */,
 				B015C5571C4F89B60001EDD6 /* Assets.xcassets */,
 				B015C5591C4F89B60001EDD6 /* LaunchScreen.storyboard */,
 				B015C55C1C4F89B60001EDD6 /* Info.plist */,
+				B015C5671C4FAB2C0001EDD6 /* BlueButton.swift */,
 			);
 			path = FavoritePlaceEx;
+			sourceTree = "<group>";
+		};
+		B015C5621C4FAABC0001EDD6 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B015C5521C4F89B60001EDD6 /* ViewController.swift */,
+				B015C5631C4FAAE60001EDD6 /* AboutViewController.swift */,
+				B015C5651C4FAAF50001EDD6 /* PhotosViewController.swift */,
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,6 +152,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B015C5641C4FAAE60001EDD6 /* AboutViewController.swift in Sources */,
+				B015C5681C4FAB2C0001EDD6 /* BlueButton.swift in Sources */,
+				B015C5661C4FAAF50001EDD6 /* PhotosViewController.swift in Sources */,
 				B015C5531C4F89B60001EDD6 /* ViewController.swift in Sources */,
 				B015C5511C4F89B60001EDD6 /* AppDelegate.swift in Sources */,
 			);
